@@ -16,7 +16,7 @@ document.querySelector(".btn").onclick = function() {
     document.querySelector("body").classList.add("try");
     setTimeout(() => {
       document.querySelector("body").classList.remove("try")
-    }, 20000);
+    }, 2000);
   }
 
 };
