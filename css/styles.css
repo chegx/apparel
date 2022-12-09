@@ -1,0 +1,293 @@
+:root {
+  /* ### Primary Colors */
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  /* ### Neutral */
+  --dark-grayish-red: hsl(0, 6%, 24%);
+  /* ### Gradients */
+  --linear-bg: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --linear-btn: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+html {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+}
+
+body {
+  /* background: var(--linear-bg); */
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+}
+
+section {
+  background: url(../images/hero-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 25rem;
+  margin-top: 22vw;
+}
+
+.logo {
+  width: 10rem;
+  position: absolute;
+  left: 8%;
+  top: 11vw;
+  transform: translateY(-50%);
+}
+
+main {
+  text-align: center;
+  padding: 9vh 8vw;
+}
+
+h1 {
+  color: var(--dark-grayish-red);
+  font-size: 4rem;
+  letter-spacing: 1rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h1 span {
+  color: var(--desaturated-red);
+  font-weight: 300;
+}
+
+.greeting {
+  color: var(--desaturated-red);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+form {
+  margin-top: 9%;
+  position: relative;
+}
+
+input {
+  background-color: inherit;
+  border: 0.18rem solid hsla(0, 36%, 70%, 50%);
+  border-radius: 3rem;
+  color: var(--dark-grayish-red);
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  width: 100%;
+  height: 4.4rem;
+}
+
+.email-adress {
+  color: hsla(0, 36%, 70%, 50%);
+  font-size: 1.4rem;
+  font-weight: 600;
+  position: absolute;
+  left: 3rem;
+  top: 0.3rem;
+  z-index: -1;
+}
+
+.btn {
+  width: 6.5rem;
+  height: 5.2rem;
+  background: url(../images/icon-arrow.svg), var(--linear-btn);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 3rem;
+  box-shadow: -0.4rem 1.4rem 1rem hsla(0, 74%, 74%, 30%);
+  cursor: pointer;
+  position: absolute;
+  top: -0.2rem;
+  right: -0.9rem;
+  transition: .2s ease;
+}
+
+.btn:not(.thank):hover {
+  background: url(../images/icon-arrow.svg), hsl(0, 74%, 90%);
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: -0.4rem 1.4rem 1rem hsla(0, 74%, 74%, 50%);
+}
+
+.error {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--soft-red);
+  margin: 0.8rem 0 0 3rem;
+  transform: scale(0);
+  transition: .2s ease;
+  text-align: left;
+}
+
+/*POP-UP MESSAGE*/
+article {
+  width: 25rem;
+  padding: 2.5rem 2.5rem 4rem;
+  border: 0.1rem solid var(--soft-red);
+  border-radius: 3rem;
+  background: var(--linear-bg);
+  background: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  text-align: left;
+  transition: .2s ease;
+}
+
+article p {
+  color: var(--dark-grayish-red);
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+h2, .accept-btn {
+  text-transform: uppercase;
+}
+
+.your-email {
+  color: var(--soft-red);
+}
+
+.accept-btn {
+  width: 100%;
+  color: white;
+  background-color: var(--soft-red);
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 1.5rem 0 1rem;
+  transition: .2s ease;
+}
+
+.accept-btn:hover {
+  opacity: 0.6;
+}
+
+/* === JAVASCRIPT CLASSES === */
+.remove .email-adress {
+  display: none;
+}
+
+.try input {
+  background: url(../images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: right 7rem center;
+  border: 0.2rem solid var(--soft-red);
+}
+
+.try .error {
+  transform: scale(1);
+}
+
+.thank main, .thank section {
+  opacity: 0.5;
+}
+
+.thank article {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.thank.btn {
+  cursor: auto;
+}
+
+/* ===DESKTOP=== */
+@media (min-width:1200px) and (orientation:landscape) {
+  body {
+    grid-template-columns: 57.7% 42.3%;
+
+  }
+
+  section {
+    background: url(../images/hero-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: unset;
+  }
+
+  main {
+    padding: 6.5rem 27% 6.5rem 20%;
+    text-align: left;
+    order: -1;
+    background: url(../images/bg-pattern-desktop.svg), var(--linear-bg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+  .logo {
+    width: 15.5rem;
+    position: static;
+    transform: unset;
+  }
+
+  h1 {
+    font-size: 6.2rem;
+    line-height: 1.1;
+    letter-spacing: 1.8rem;
+    margin: 16.5vh 0 2.5vh;
+  }
+
+  .greeting {
+    font-size: 1.6rem;
+    line-height: 1.8;
+  }
+
+  input {
+    background-position: right 9.5rem center;
+    height: 5rem;
+    font-size: 1.6rem;
+  }
+
+  .email-adress {
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    width: 10rem;
+    height: 5.8rem;
+  }
+
+  /* === JS DESKTOP=== */
+  .try input {
+    background-position: right 11.5rem center;
+  }
+}
+
+/* === TABLETS === */
+@media (min-width: 500px) and (max-width:1199px) and (orientation:portrait) {
+  section {
+    min-height: 35rem;
+  }
+
+  main {
+    align-self: center;
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+}
+
+@media (min-width: 924px) and (max-width:1199px) and (orientation:landscape) {
+  body {
+    grid-template-columns: 57.7% 42.3%;
+  }
+
+  section {
+    background: url(../images/hero-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: unset;
+  }
+
+  main {
+    align-self: center;
+    padding-left: 25%;
+    padding-right: 20%;
+    order: -1;
+  }
+}
