@@ -15,14 +15,15 @@ html {
 }
 
 body {
-  /* background: var(--linear-bg); */
+  background-image: var(--linear-bg);
+  background-repeat: no-repeat;
   margin: 0;
   min-height: 100vh;
   display: grid;
 }
 
 section {
-  background: url(../images/hero-mobile.jpg);
+  background-image: url(../images/hero-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 25rem;
@@ -123,7 +124,7 @@ input {
 }
 
 /*POP-UP MESSAGE*/
-article {
+  article {
   width: 25rem;
   padding: 2.5rem 2.5rem 4rem;
   border: 0.1rem solid var(--soft-red);
@@ -174,7 +175,7 @@ h2, .accept-btn {
 }
 
 .try input {
-  background: url(../images/icon-error.svg);
+  background-image: url(../images/icon-error.svg);
   background-repeat: no-repeat;
   background-position: right 7rem center;
   border: 0.2rem solid var(--soft-red);
@@ -200,13 +201,11 @@ h2, .accept-btn {
 @media (min-width:1200px) and (orientation:landscape) {
   body {
     grid-template-columns: 57.7% 42.3%;
-
+    background-image: url(../images/bg-pattern-desktop.svg);
   }
 
   section {
-    background: url(../images/hero-desktop.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(../images/hero-desktop.jpg);
     margin-top: unset;
   }
 
@@ -214,11 +213,7 @@ h2, .accept-btn {
     padding: 6.5rem 27% 6.5rem 20%;
     text-align: left;
     order: -1;
-    background: url(../images/bg-pattern-desktop.svg), var(--linear-bg);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-  }
+    }
 
   .logo {
     width: 15.5rem;
@@ -275,12 +270,11 @@ h2, .accept-btn {
 @media (min-width: 924px) and (max-width:1199px) and (orientation:landscape) {
   body {
     grid-template-columns: 57.7% 42.3%;
+    background-image: url(../images/bg-pattern-desktop.svg);
   }
 
   section {
-    background: url(../images/hero-desktop.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(../images/hero-desktop.jpg);
     margin-top: unset;
   }
 
@@ -289,5 +283,11 @@ h2, .accept-btn {
     padding-left: 25%;
     padding-right: 20%;
     order: -1;
+    text-align: left;
+  }
+    .logo {
+    position: static;
+    transform: unset;
+    margin-bottom: 10vh;
   }
 }
