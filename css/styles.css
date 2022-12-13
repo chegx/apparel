@@ -64,30 +64,27 @@ h1 span {
   line-height: 1.6;
 }
 
-form {
-  margin-top: 9%;
-  position: relative;
-}
-
 input {
+  width: 100%;
+  height: 4.4rem;
   background-color: inherit;
   border: 0.18rem solid hsla(0, 36%, 70%, 50%);
   border-radius: 3rem;
   color: var(--dark-grayish-red);
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 600;
-  width: 100%;
-  height: 4.4rem;
+  text-indent: 3rem;
 }
 
-.email-adress {
-  color: hsla(0, 36%, 70%, 50%);
+input::placeholder {
+  color: var(--desaturated-red);
   font-size: 1.4rem;
   font-weight: 600;
-  position: absolute;
-  left: 3rem;
-  top: 0.3rem;
-  z-index: -1;
+}
+
+.relative {
+  position: relative;
+  margin-top: 9%;
 }
 
 .btn {
@@ -106,7 +103,7 @@ input {
   transition: .2s ease;
 }
 
-.btn:not(.thank):hover {
+.btn:hover {
   background: url(../images/icon-arrow.svg), hsl(0, 74%, 90%);
   background-repeat: no-repeat;
   background-position: center;
@@ -117,14 +114,15 @@ input {
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--soft-red);
-  margin: 0.8rem 0 0 3rem;
+  margin: 1rem 0 0 3rem;
   transform: scale(0);
   transition: .2s ease;
   text-align: left;
+  visibility: hidden;
 }
 
 /*POP-UP MESSAGE*/
-  article {
+article {
   width: 25rem;
   padding: 2.5rem 2.5rem 4rem;
   border: 0.1rem solid var(--soft-red);
@@ -136,7 +134,7 @@ input {
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   text-align: left;
-  transition: .2s ease;
+  transition: .5s ease;
 }
 
 article p {
@@ -170,12 +168,8 @@ h2, .accept-btn {
 }
 
 /* === JAVASCRIPT CLASSES === */
-.remove .email-adress {
-  display: none;
-}
-
-.try input {
-  background-image: url(../images/icon-error.svg);
+.try input:invalid {
+  background: url(../images/icon-error.svg);
   background-repeat: no-repeat;
   background-position: right 7rem center;
   border: 0.2rem solid var(--soft-red);
@@ -183,18 +177,20 @@ h2, .accept-btn {
 
 .try .error {
   transform: scale(1);
-}
+  visibility: visible;
+  }
 
 .thank main, .thank section {
   opacity: 0.5;
 }
 
-.thank article {
-  transform: translate(-50%, -50%) scale(1);
+.thank main {
+  pointer-events: none;
+  user-select: none;
 }
 
-.thank.btn {
-  cursor: auto;
+.thank article {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 /* ===DESKTOP=== */
@@ -213,7 +209,7 @@ h2, .accept-btn {
     padding: 6.5rem 27% 6.5rem 20%;
     text-align: left;
     order: -1;
-    }
+  }
 
   .logo {
     width: 15.5rem;
@@ -239,7 +235,7 @@ h2, .accept-btn {
     font-size: 1.6rem;
   }
 
-  .email-adress {
+  input::placeholder {
     font-size: 1.6rem;
   }
 
@@ -249,7 +245,7 @@ h2, .accept-btn {
   }
 
   /* === JS DESKTOP=== */
-  .try input {
+  .try input:invalid {
     background-position: right 11.5rem center;
   }
 }
@@ -285,7 +281,8 @@ h2, .accept-btn {
     order: -1;
     text-align: left;
   }
-    .logo {
+
+  .logo {
     position: static;
     transform: unset;
     margin-bottom: 10vh;
