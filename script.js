@@ -1,6 +1,6 @@
 const inpObj = document.getElementById("email");
 
-document.querySelector(".btn").onclick = function() {
+document.getElementById("btn").onclick = function() {
 
   if (!inpObj.checkValidity()) {
     document.body.classList.add("try");
@@ -13,10 +13,10 @@ document.querySelector(".btn").onclick = function() {
     document.body.classList.add("thank");
   }
 
-  document.querySelector('.your-email').innerText = inpObj.value;
-    
+  document.getElementById('your-email').innerText = inpObj.value;
+
 };
 
-document.querySelector(".accept-btn").onclick = function() {
+document.getElementById("accept-btn").onclick = function() {
   document.body.classList.remove("thank");
 };
