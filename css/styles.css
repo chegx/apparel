@@ -16,13 +16,12 @@ html {
 
 body {
   background-image: var(--linear-bg);
-  background-repeat: no-repeat;
   margin: 0;
   min-height: 100vh;
   display: grid;
 }
 
-section {
+.bg {
   background-image: url(../images/hero-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,9 +37,11 @@ section {
   transform: translateY(-50%);
 }
 
-main {
+.page {
   text-align: center;
-  padding: 9vh 8vw;
+  padding: 9vh 8%;
+  max-width: 32em;
+  margin: auto;
 }
 
 h1 {
@@ -67,7 +68,7 @@ h1 span {
 input {
   width: 100%;
   height: 4.4rem;
-  background-color: inherit;
+  background-color: transparent;
   border: 0.18rem solid hsla(0, 36%, 70%, 50%);
   border-radius: 3rem;
   color: var(--dark-grayish-red);
@@ -82,7 +83,7 @@ input::placeholder {
   font-weight: 600;
 }
 
-.relative {
+form {
   position: relative;
   margin-top: 9%;
 }
@@ -123,18 +124,20 @@ input::placeholder {
 
 /*POP-UP MESSAGE*/
 article {
-  width: 25rem;
+  max-width: 25rem;
+  min-width: 20rem;
   padding: 2.5rem 2.5rem 4rem;
   border: 0.1rem solid var(--soft-red);
   border-radius: 3rem;
   background: var(--linear-bg);
-  background: white;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   text-align: left;
-  transition: .5s ease;
+  transition: 1s ease;
+  visibility: hidden;
+  z-index: 1;
 }
 
 article p {
@@ -178,37 +181,42 @@ h2, .accept-btn {
 .try .error {
   transform: scale(1);
   visibility: visible;
-  }
-
-.thank main, .thank section {
-  opacity: 0.5;
 }
 
-.thank main {
+.thank .page, .thank .bg {
+  opacity: 0.5;
   pointer-events: none;
   user-select: none;
 }
 
 .thank article {
+  visibility: visible;
   transform: translate(-50%, -50%) scale(1);
 }
 
 /* ===DESKTOP=== */
 @media (min-width:1200px) and (orientation:landscape) {
   body {
-    grid-template-columns: 57.7% 42.3%;
-    background-image: url(../images/bg-pattern-desktop.svg);
+    grid-template-columns: 58% 42%;
+    /* background-image: none; */
   }
 
-  section {
+  .bg {
     background-image: url(../images/hero-desktop.jpg);
     margin-top: unset;
+    order: 2;
   }
 
   main {
-    padding: 6.5rem 27% 6.5rem 20%;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-size: cover;
+
+  }
+
+  .page {
+    padding: 6.5rem 8% 6.5rem 0;
     text-align: left;
-    order: -1;
+    max-width: 43rem;
   }
 
   .logo {
@@ -252,33 +260,34 @@ h2, .accept-btn {
 
 /* === TABLETS === */
 @media (min-width: 500px) and (max-width:1199px) and (orientation:portrait) {
-  section {
+  .bg {
     min-height: 35rem;
   }
 
-  main {
+  .page {
     align-self: center;
-    padding-left: 30%;
-    padding-right: 30%;
   }
 }
 
 @media (min-width: 924px) and (max-width:1199px) and (orientation:landscape) {
   body {
-    grid-template-columns: 57.7% 42.3%;
+    grid-template-columns: 58% 42%;
     background-image: url(../images/bg-pattern-desktop.svg);
   }
 
-  section {
+  .bg {
     background-image: url(../images/hero-desktop.jpg);
     margin-top: unset;
+    order: 2;
   }
 
   main {
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-size: cover;
     align-self: center;
-    padding-left: 25%;
-    padding-right: 20%;
-    order: -1;
+  }
+
+  .page {
     text-align: left;
   }
 
