@@ -10,39 +10,38 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-
 </head>
 
 <body>
-  <section>
+  <section class="bg">
     <!-- BACKGROUND PHOTOS -->
   </section>
 
   <main>
 
-    <img class="logo" src="images/logo.svg" alt="logo base apparel">
-    <h1><span>We're</span> coming soon</h1>
+    <section class="page">
 
-    <form onsubmit="return false" novalidate>
-      <label for="email" class="greeting">Hello fellow shoppers! We're currently building our new fashion store.
-        Add your email below to stay up-to-date with announcements and our launch deals.</label>
+      <img class="logo" src="images/logo.svg" alt="logo base apparel">
+      <h1><span>We're</span> coming soon</h1>
+      <p class="greeting">Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-      <div class="relative">
+      <form onsubmit="return false" novalidate>
         <input id="email" type="email" name="email" placeholder="Email Adress" pattern="^((?!\s).)*$" required aria-describedby="email-error" aria-invalid="true">
+        <button id="btn" class="btn" type="submit" name="button"></button>
         <p id="email-error" role="alert" class="error">Please provide a valid email</p>
-        <button class="btn" type="submit" name="button"></button>
-      </div>
-    </form>
+      </form>
 
+    </section>
   </main>
   <!-- POP-UP MESSAGE -->
-  <article class="">
+  <article>
     <h2>Newsletter</h2>
-    <p>Please check your email <span class="your-email"></span> and follow the instructions to complete your request. <br>Thank you.</p>
-    <button class="accept-btn" type="button" name="button">Accept</button>
+    <p>Please check your email <span id="your-email" class="your-email"></span> and follow the instructions to complete your request. <br>Thank you.</p>
+    <button id="accept-btn" class="accept-btn" type="button" name="button">Accept</button>
   </article>
 
-  <script src="script.js" charset="utf-8"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
