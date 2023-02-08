@@ -26,7 +26,7 @@
       <p class="greeting">Hello fellow shoppers! We're currently building our new fashion store.
         Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-      <form onsubmit="return false" novalidate>
+      <form action="success.html" method="post" novalidate>
         <input id="email" type="email" name="email" placeholder="Email Adress" pattern="^((?!\s).)*$" required aria-describedby="email-error" aria-invalid="true">
         <button id="btn" class="btn" type="submit" name="button"></button>
         <p id="email-error" role="alert" class="error">Please provide a valid email</p>
@@ -41,7 +41,7 @@
     <button id="accept-btn" class="accept-btn" type="button" name="button">Accept</button>
   </article>
 
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
 </body>
 
 </html>
