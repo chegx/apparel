@@ -6,9 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Base Apparel coming soon page | Frontend Mentor</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -18,30 +15,21 @@
   </section>
 
   <main>
-
     <section class="page">
-
-      <img class="logo" src="images/logo.svg" alt="logo base apparel">
+      <img class="logo" src="images/logo.svg" alt="logo">
       <h1><span>We're</span> coming soon</h1>
       <p class="greeting">Hello fellow shoppers! We're currently building our new fashion store.
         Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-      <form action="success.html" method="post" novalidate>
+      <form action="/" method="post" novalidate>
         <input id="email" type="email" name="email" placeholder="Email Adress" pattern="^((?!\s).)*$" required aria-describedby="email-error" aria-invalid="true">
-        <button id="btn" class="btn" type="submit" name="button"></button>
+        <button id="btn" class="btn" type="submit"></button>
         <p id="email-error" role="alert" class="error">Please provide a valid email</p>
       </form>
-
     </section>
   </main>
-  <!-- POP-UP MESSAGE -->
-  <article>
-    <h2>Newsletter</h2>
-    <p>Please check your email <span id="your-email" class="your-email"></span> and follow the instructions to complete your request. <br>Thank you.</p>
-    <button id="accept-btn" class="accept-btn" type="button" name="button">Accept</button>
-  </article>
 
-  <!-- <script src="script.js"></script> -->
+  <script src="script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,23 @@
+{
+  "name": "apparel",
+  "version": "1.0.0",
+  "description": "This is a solution to the [Base Apparel coming soon page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0). Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chegx/apparel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chegx/apparel/issues"
+  },
+  "homepage": "https://github.com/chegx/apparel#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

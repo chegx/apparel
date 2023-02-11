@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
 :root {
   /* ### Primary Colors */
   --desaturated-red: hsl(0, 36%, 70%);
@@ -122,52 +124,9 @@ form {
   visibility: hidden;
 }
 
-/*POP-UP MESSAGE*/
-article {
-  max-width: 25rem;
-  min-width: 20rem;
-  padding: 2.5rem 2.5rem 4rem;
-  border: 0.1rem solid var(--soft-red);
-  border-radius: 3rem;
-  background: var(--linear-bg);
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  text-align: left;
-  transition: 1s ease;
-  visibility: hidden;
-  z-index: 1;
-}
-
-article p {
-  color: var(--dark-grayish-red);
-  font-size: 1.4rem;
-  line-height: 1.6;
-}
-
-h2, .accept-btn {
-  text-transform: uppercase;
-}
-
-.your-email {
-  color: var(--soft-red);
-}
-
-.accept-btn {
-  width: 100%;
-  color: white;
-  background-color: var(--soft-red);
-  border: none;
-  border-radius: 3rem;
-  cursor: pointer;
-  font-family: 'Josefin Sans', sans-serif;
-  padding: 1.5rem 0 1rem;
-  transition: .2s ease;
-}
-
-.accept-btn:hover {
-  opacity: 0.6;
+/* === ERROR PAGE === */
+.error-page {
+  display: block;
 }
 
 /* === JAVASCRIPT CLASSES === */
@@ -183,22 +142,10 @@ h2, .accept-btn {
   visibility: visible;
 }
 
-.thank .page, .thank .bg {
-  opacity: 0.5;
-  pointer-events: none;
-  user-select: none;
-}
-
-.thank article {
-  visibility: visible;
-  transform: translate(-50%, -50%) scale(1);
-}
-
 /* ===DESKTOP=== */
 @media (min-width:1200px) and (orientation:landscape) {
   body {
     grid-template-columns: 58% 42%;
-    /* background-image: none; */
   }
 
   .bg {

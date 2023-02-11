@@ -26,9 +26,9 @@ Users should be able to:
 
 ### Screenshot
 
-|Mobile|Tablet Valid Email|Desktop Error Message|
-|---|---|---|
-|![](./screenshots/mobile.jpg)|![](./screenshots/tablet-valid.jpg)|![](./screenshots/desktop-error.jpg)|
+|Mobile|Desktop Error Message|
+|---|---|
+|![](./screenshots/mobile.jpg)|![](./screenshots/desktop-error.jpg)|
 
 ### Links
 
@@ -43,6 +43,8 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - JavaScript
+- Node JS
+- Express
 
 ## Author
 
